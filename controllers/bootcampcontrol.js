@@ -28,7 +28,7 @@ const getbootcamps=asynchandler(async (req,res)=>{
         query=query.sort('-createdAt')
     }
     const page=parseInt(req.query.page,10) ||1
-    const limit=parseInt(req.query.limit,10) ||2
+    const limit=parseInt(req.query.limit,10) ||3
     const skip=(page-1)*limit
     query=query.skip(skip).limit(limit);
     const camps = await query
